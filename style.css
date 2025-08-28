@@ -1,0 +1,57 @@
+body {
+    background-color: #111;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.yellow-bg {
+    background-color: #FDE047;
+}
+
+.card {
+    background-color: #FDE047;
+    color: #111;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.interactive-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interactive-card:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+#typing-text::after {
+    content: '|';
+    font-weight: bold;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: #FDE047;
+    }
+}
+
+.hero-section {
+    background: linear-gradient(to right, #FDE047 50%, #111 50%);
+}
+
+@media (max-width: 767px) {
+    .hero-section {
+        background: linear-gradient(to bottom, #FDE047 50%, #111 50%);
+    }
+}
+
+.form-input {
+    background-color: #333;
+    border: 1px solid #555;
+    color: white;
+}
